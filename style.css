@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+main {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.col-1 {
+    width: 57.5%;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 65px 220px 135px 160px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: stretch;
+}
+
+.col-2 {
+    width: 42.5%;
+    display: block;
+    height: 100vh;
+    background-image: url('./images/hero-desktop.jpg');
+}
+
+.logo {
+    margin-bottom: 135px;
+}
+
+.title {
+    font-size: 66px;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 15px;
+    margin-bottom: 40px;
+}
+
+.title .first-line {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.title .second-line {
+    color: hsl(0, 6%, 24%);
+    font-weight: 700;
+}
+
+.hero p {
+    color: hsl(0, 36%, 70%);
+    line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.form {
+    width: 100%;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 448px;
+    width: 100%;
+}
+
+input[type="email"] {
+    border: 1px solid hsl(0, 36%, 70%);
+    height: 54px;
+    border-radius: 50px;
+    padding-left: 30px;
+    line-height: 0;
+    width: 110%;
+    margin-right: -75px;
+}
+
+.btn {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    height: 54px;
+    width: 110px;
+    border-radius: 50px;
+    line-height: 0;
+    border: none;
+    z-index: 9;
+}
+
+::placeholder {
+    font-size: 16px;
+    color: hsl(0, 36%, 70%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
