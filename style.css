@@ -43,7 +43,7 @@ main {
 }
 
 .logo {
-    margin-bottom: 135px;
+    margin-bottom: 8rem;
 }
 
 .title {
@@ -112,4 +112,19 @@ input[type="email"] {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
+}
+
+/* TABLET VERSION */
+@media only screen and (max-width: 1024px) {
+    
+    .col-1 {
+        padding: 50px;
+        align-content: center;
+        box-sizing: border-box;
+    }
+    
+    .title {
+        font-size: 54px;
+    }
+
 }
