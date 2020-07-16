@@ -9,6 +9,7 @@ main {
     height: 100%;
     font-size: 16px;
     font-family: 'Josefin Sans', sans-serif;
+    overflow: hidden;
 }
 
 .container {
@@ -19,12 +20,12 @@ main {
 
 .col-1 {
     width: 57.5%;
-    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    /* background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)), url('./images/bg-pattern-desktop.svg'); */
     background-image: url('./images/bg-pattern-desktop.svg');
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
-    padding: 65px 220px 135px 160px;
+    background-size: cover;
+    padding: 65px 220px 135px 165px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
@@ -36,6 +37,9 @@ main {
     display: block;
     height: 100vh;
     background-image: url('./images/hero-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .logo {
@@ -43,11 +47,12 @@ main {
 }
 
 .title {
-    font-size: 66px;
+    font-size: 64px;
     text-transform: uppercase;
     display: inline-block;
     letter-spacing: 15px;
     margin-bottom: 40px;
+    line-height: 1.1;
 }
 
 .title .first-line {
@@ -85,18 +90,20 @@ input[type="email"] {
     border-radius: 50px;
     padding-left: 30px;
     line-height: 0;
-    width: 110%;
+    width: 100%;
     margin-right: -75px;
+    opacity: 0.75;
 }
 
 .btn {
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     height: 54px;
-    width: 110px;
+    width: 30%;
     border-radius: 50px;
     line-height: 0;
     border: none;
     z-index: 9;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.08)
 }
 
 ::placeholder {
