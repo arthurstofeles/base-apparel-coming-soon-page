@@ -128,3 +128,93 @@ input[type="email"] {
     }
 
 }
+
+/* MOBILE VERSION */
+@media only screen and (max-width: 767px) {
+    
+    body, main {
+        overflow: visible;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .col-1 {
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+        align-content: space-between;
+    }
+
+    .col-2 {
+        display: none;
+    }
+
+    .logo {
+        padding: 30px;
+        background-color: #fffdfe;
+        width: 100%;
+        margin-bottom: 0px;
+        position: relative;
+        margin-bottom: 250px;
+    }
+
+    .logo::after {
+        content: "";
+        width: 100%;
+        height: 250px;
+        background-image: url(./images/hero-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top: 85px;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    .title {
+        margin-top: 64px;
+        font-size: 38px;
+        margin-bottom: 15px;
+        letter-spacing: 11px;
+        line-height: 1.1;
+    }
+
+    .hero p {
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .form {
+        padding: 0 30px 90px 30px;
+    }
+
+    input[type="email"] {
+        height: 48px;
+        padding-left: 25px;
+    }
+
+    .btn {
+        height: 48px;
+        width: 20%;
+    }
+
+    ::placeholder {
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+}
