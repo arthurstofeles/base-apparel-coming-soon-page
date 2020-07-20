@@ -80,8 +80,10 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 448px;
+    max-width: 500px;
     width: 100%;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 input[type="email"] {
@@ -93,15 +95,36 @@ input[type="email"] {
     width: 100%;
     margin-right: -75px;
     opacity: 0.75;
+    position: relative;
 }
 
 input[type="email"]:focus {
     border: 1px solid hsl(0, 36%, 70%);
     outline: none;
-    color: hsl(0, 36%, 70%);
+    color: hsl(0, 6%, 24%);
     border-radius: 50px;
     padding-left: 30px;
-    bo
+}
+
+input[type="email"]:invalid {
+    border: 2px solid hsl(0, 93%, 68%);
+    color: hsl(0, 6%, 24%);
+    font-weight: 400;
+}
+
+form:invalid::before {
+    content: " ";
+    width: 22px;
+    height: 22px;
+    padding: 1px;
+    background-image: url(./images/icon-error.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 30%;
+    top: auto;
+    z-index: 9;
 }
 
 .btn {
@@ -112,7 +135,8 @@ input[type="email"]:focus {
     line-height: 0;
     border: none;
     z-index: 9;
-    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.08)
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.08);
+    outline: none;
 }
 
 ::placeholder {
@@ -121,6 +145,14 @@ input[type="email"]:focus {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
+}
+
+#demo {
+    color: hsl(0, 93%, 68%);
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 32px;
+    font-size: 12px;
 }
 
 /* TABLET VERSION */
