@@ -20,7 +20,6 @@ main {
 
 .col-1 {
     width: 57.5%;
-    /* background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)), url('./images/bg-pattern-desktop.svg'); */
     background-image: url('./images/bg-pattern-desktop.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -40,6 +39,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 .logo {
@@ -51,7 +51,7 @@ main {
     text-transform: uppercase;
     display: inline-block;
     letter-spacing: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     line-height: 1.1;
 }
 
@@ -114,15 +114,14 @@ input[type="email"]:invalid {
 
 form:invalid::before {
     content: " ";
-    width: 22px;
-    height: 22px;
-    padding: 1px;
+    width: 20px;
+    height: 20px;
     background-image: url(./images/icon-error.svg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    right: 30%;
+    right: 25%;
     top: auto;
     z-index: 9;
 }
@@ -130,13 +129,19 @@ form:invalid::before {
 .btn {
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     height: 54px;
-    width: 30%;
+    width: 25%;
     border-radius: 50px;
     line-height: 0;
     border: none;
     z-index: 9;
     box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.08);
     outline: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.20);
+    background: hsl(0, 80%, 86%);
 }
 
 ::placeholder {
@@ -153,6 +158,47 @@ form:invalid::before {
     padding-right: 30px;
     height: 32px;
     font-size: 12px;
+    line-height: 1.2;
+}
+
+.attribution-desktop {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    font-weight: 300;
+}
+
+.attribution-desktop a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.attribution-desktop a:hover {
+    color:  hsl(0, 6%, 24%);
+}
+
+.attribution-mobile {
+    display: none;
+    color: hsl(0, 6%, 24%);
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.attribution-mobile a {
+    text-decoration: none;
+    color: hsl(0, 6%, 24%);
+}
+
+.attribution-mobile a:hover {
+    color: hsl(0, 80%, 86%);
 }
 
 /* TABLET VERSION */
@@ -168,6 +214,11 @@ form:invalid::before {
         font-size: 54px;
     }
 
+    .attribution {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+    }
 }
 
 /* MOBILE VERSION */
@@ -241,13 +292,25 @@ form:invalid::before {
     }
 
     .form {
-        padding: 0 30px 90px 30px;
+        padding: 0 30px 45px 30px;
     }
+
+    form:invalid::before {
+        width: 16px;
+        height: 16px;
+        right: 25%;
+    }
+    
 
     input[type="email"] {
         height: 48px;
         padding-left: 25px;
     }
+
+    input[type="email"]:focus {
+        padding-left: 25px;
+    }
+    
 
     .btn {
         height: 48px;
@@ -258,4 +321,34 @@ form:invalid::before {
         font-size: 14px;
         letter-spacing: 0;
     }
+
+    #demo {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .attribution-mobile {
+        display: block;
+    }
+}
+
+/* SMALL MOBILE VERSION */
+@media only screen and (max-width: 300px) {
+
+    .form {
+        padding: 0 15px 45px 15px;
+    }
+
+    .title {
+        margin-top: 54px;
+        font-size: 32px;
+        margin-bottom: 15px;
+        letter-spacing: 11px;
+        line-height: 1.1;
+    }
+
+    .hero {
+        padding: 0 15px;
+    }
+
 }
